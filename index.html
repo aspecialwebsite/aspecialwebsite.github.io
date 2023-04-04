@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<style>
+body { 
+    background: #1a1a1a;
+}
+#lol {
+    
+}
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri&display=swap');
+
+body {
+    /* Font face note 2: Use this with all UI elements. */
+    font-family: 'Hind Siliguri', sans-serif;
+    font-size: 16px;
+    color: #fff;
+}
+#sofa {
+    display: none;
+}
+</style>
+<div id="lol" class="center">
+   <p>Hello!</p>
+   <p>You're trying out a new dashboard, if you want to set it up, click "Next" to continue.</p>
+   <button class="app" onclick="trolled();">Next</button>
+</div>
+<div id="sofa" class="center">
+    <p>please forgive me</p>
+</div>
+<link rel="stylesheet" href="WebTopui.css">
+<script src="WebTopui.js"></script>
+<script>
+function trolled() {
+    hide("lol");
+    loop();
+}
+function loop() {
+    var msg = new SpeechSynthesisUtterance();
+    msg.text = "moist supper, moist sofa.";
+    window.speechSynthesis.speak(msg);
+    show("sofa");
+    setTimeout(loop, 1000);
+}
+</script>
