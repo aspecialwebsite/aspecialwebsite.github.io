@@ -24,7 +24,8 @@ body {
    <button class="app" onclick="trolled();">Next</button>
 </div>
 <div id="sofa" class="center">
-    <p>please forgive me</p>
+    <p>Dashboard unavailable, listen to this until it's available.</p>
+    <button class="app" onclick="trollend();">MAKE IT STOP!</button>
 </div>
 <link rel="stylesheet" href="WebTopui.css">
 <script src="WebTopui.js"></script>
@@ -32,6 +33,9 @@ body {
 function trolled() {
     hide("lol");
     loop();
+}
+function trollend() {
+    window.location.reload();
 }
 function loop() {
     var msg = new SpeechSynthesisUtterance();
